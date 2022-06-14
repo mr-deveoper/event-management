@@ -26,7 +26,7 @@ custom drupal 9 module that will assist the back-end users in managing events th
 * ### Front-end
     * Page to list published events.
     * Details page for events.
-    * Drupal block to list the latest 5 created events
+    * Drupal block to list the latest 5 created events.
 
 # Requirements
 - PHP => `8.0`
