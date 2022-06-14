@@ -37,7 +37,7 @@ custom drupal 9 module that will assist the back-end users in managing events th
 
 Run the following Command in your cli.
 
-`composer require mr-developer/event-management`
+`composer require mr-deveoper/event-management`
 
 # Configurations
 
@@ -70,4 +70,4 @@ Once its done installing
 
 # Documentation
 
-See full documentation in the [wiki page](https://github.com/mr-developer/event-management/wiki).
+See full documentation in the [wiki page](https://github.com/mr-deveoper/event-management/wiki).
