@@ -43,28 +43,33 @@ Run the following Command in your cli.
 
 Once its done installing
 
-1. add new category
+1. intstall module
+  - go to `Admin > Extend `
+  - search for `Events Management` and check on it
+  - press install at the end of the page to install the module
+
+2. add new category
   - go to `Admin > Structure > Taxonomy`
   - add New Taxonomy with name `Event Category`
   - add new categories in it and you will find it show automatically in category when you add or edit event
 
-2. change module settings
+3. change module settings
   - go to `Admin > Configuration > Event settings`
   - you will find checkbox for hiding past events
   - you will find inputbox for define number of events in page
 
-3. add new event
+4. add new event
   - go to `Admin > Content > Events`
   - you will find a table to add , edit , delete events
 
-4. add Latest Events Block
+5. add Latest Events Block
   - go to `Admin > Structure > Views`
   - edit any view
   - press `add block` button
   - search for Latest Events and select it
   - you can change the view and layout by block configuration
 
-5. View Events List
+6. View Events List
   - just go to `/events`
 
 

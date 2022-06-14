@@ -1,9 +1,32 @@
 <?php
 
 /**
+* @file
+* Module for creating config log.
+*/
+
+/**
+* Implementation of hook_install().
+*/
+function event_install() {
+  // Use schema API to create database table.
+  drupal_install_schema('event');
+}
+
+
+
+/**
+  * Implementation of hook_uninstall().
+*/
+function event_uninstall() {
+  // Remove tables.
+  drupal_uninstall_schema('event');
+}
+
+/**
  * Implements hook_schema().
  */
-function config_log_schema() {
+function event_schema() {
   $schema['config_log'] = array(
     'description' => 'The base table for configuration logging.',
     'fields' => array(
