@@ -10,7 +10,12 @@
 */
 function event_install() {
   // Use schema API to create database table.
-  drupal_install_schema('event');
+  \Drupal::entityTypeManager()->clearCachedDefinitions();
+  $db_connection = \Drupal::database();
+  if (!$db_connection->schema()->tableExists('config_log')) {
+    drupal_install_schema('event');
+  }
+
 }
 
 
@@ -62,13 +67,7 @@ function event_schema() {
         'length' => 255,
         'not null' => TRUE,
         'default' => '',
-      ),
-      'old_name' => array(
-        'description' => 'For renames, the old Config object name.',
-        'type' => 'varchar',
-        'length' => 255,
-        'default' => '',
-      ),
+      )
     ),
     'primary key' => array('clid'),
     'indexes' => array(

@@ -153,7 +153,6 @@ class ConfigLogDatabaseSubscriber extends ConfigLogSubscriberBase {
       'uid' => $this->currentUser->id(),
       'operation' => 'rename',
       'name' => $config->getName(),
-      'old_name' => $event->getOldName(),
       'data' => $this->encode($config->get()),
     ];
     $this->insertRecord($values);
