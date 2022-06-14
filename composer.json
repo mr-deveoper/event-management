@@ -4,6 +4,7 @@
     "description": "Drupal 9 module for Event Management.",
     "homepage": "https://github.com/mr-deveoper/event-management",
     "license": "GPL-2.0-or-later",
+    "minimum-stability": "stable",
     "authors": [
         {
             "name": "Ahmed ali",
