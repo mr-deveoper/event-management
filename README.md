@@ -4,7 +4,7 @@ custom drupal 9 module that will assist the back-end users in managing events th
 
 
 # Table of contents
-- [Event_Management](#event-management)
+- [Event Management](#event-management)
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
