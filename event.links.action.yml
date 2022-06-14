@@ -1,0 +1,5 @@
+event.event_add:
+  route_name: event.event_add
+  title: 'Add a event'
+  appears_on:
+    - 'event.event_list'

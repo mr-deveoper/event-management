@@ -1,0 +1,11 @@
+create events:
+  title: 'Create events'
+edit events:
+  title: 'Edit events'
+administer events:
+  title: 'Administer events'
+  restrict access: true
+access events:
+  title: 'View events'
+access event overview:
+  title: 'Access the Event overview page'

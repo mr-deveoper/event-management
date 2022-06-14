@@ -1,0 +1,10 @@
+drupal.event-links:
+  version: VERSION
+  css:
+    component:
+      css/event.base.css: {}
+      css/event.theme.css: {}
+
+admin:
+  js:
+      js/event.admin.js: {}

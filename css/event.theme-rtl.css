@@ -1,0 +1,9 @@
+
+/**
+ * @file
+ * Right-to-left specfic theme stylesheet for the Event module.
+ */
+
+.event .percent {
+  text-align: left;
+}

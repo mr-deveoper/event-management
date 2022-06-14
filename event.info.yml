@@ -1,0 +1,14 @@
+name: Events Management
+type: module
+core_version_requirement: ^8.7.7 || ^9
+description: 'Allows admin to manage events'
+package: Custom Modules
+configure: event.settings
+dependencies:
+  - drupal:field
+  - drupal:views
+  - drupal:user
+
+version: '1.0'
+project: 'event'
+datestamp: 1593461866

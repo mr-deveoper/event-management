@@ -1,0 +1,80 @@
+<?php
+
+/**
+ * @file
+ * Collects Aritcles on different topics in the form
+ */
+
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\event\Entity\Event;
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Denotes that the event is not published.
+ */
+const EVENT_NOT_PUBLISHED = 0;
+
+/**
+ * Denotes that the event is published.
+ */
+const EVENT_PUBLISHED = 1;
+
+/**
+ * Implements hook_help().
+ */
+function event_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.event':
+    $output = '<h3>' . t('About') . '</h3>';
+    $output .= '<p>' . t('The Event module can be used to create simple surveys or titlenaires that display cumulative results. A event is a good way to receive feedback from site users and community members. For more information, see the online handbook entry for the <a href=":event">Event module</a>.', array(':event' => 'https://www.drupal.org/docs/8/modules/event')) . '</p>';
+    $output .= '<h3>' . t('Uses') . '</h3>';
+    $output .= '<dl>';
+    $output .= '<dt>' . t('Creating a event') . '</dt>';
+    $output .= '<dd>' . t('Users can create a event by clicking on <a href=":add-event">Add a event</a> on the <a href=":events">Events</a> page, and entering the title being posed, the answer choices, and beginning vote counts for each choice. The status (closed or active) and duration (length of time the event remains active for new votes) can also be specified.', array(':add-event' => Url::fromRoute('event.event_add')->toString(), ':events' => Url::fromRoute('event.event_list')->toString())) . '</dd>';
+    $output .= '<dt>' . t('Viewing events') . '</dt>';
+    $output .= '<dd>' . t('You can visit the <a href=":events">Events</a> page to view all current events, or alternately enable the <em>Latest Events</em> block on the <a href=":blocks">Blocks administration page</a>. To vote in or view the results of a specific event, you can click on the event itself.', array(':events' => Url::fromRoute('event.event_list')->toString(), ':blocks' => Url::fromRoute('block.admin_display')->toString())) . '</dd>';
+    $output .= '</dl>';
+    return $output;
+  }
+}
+
+
+/**
+ *  Implements hook_page_attachments().
+ */
+function event_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'event/drupal.event-links';
+}
+
+/**
+ * Implements hook_cron().
+ */
+function event_cron() {
+
+}
+
+
+/**
+ * Implements template_preprocess_HOOK() for event-results.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - raw_title: A string for the title of the event.
+ *   - results: The results of the event.
+ *   - block: A boolean to define if the event is a block.
+ *   - nid: The node ID of the event.
+ *   The raw_* inputs to this are naturally unsafe; often safe versions are
+ *   made to simply overwrite the raw version, but in this case it seems likely
+ *   that the title and the links may be overridden by the theme layer, so they
+ *   are left in with a different name for that purpose.
+ *
+ * @see event-results.html.twig
+ */
+function template_preprocess_event_results(&$variables) {
+  $variables['title'] = $variables['raw_title'];
+  $variables['results_title'] = t('Results');
+}
+

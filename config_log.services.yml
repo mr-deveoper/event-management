@@ -1,0 +1,11 @@
+services:
+  config_log_database_subscriber:
+    class: Drupal\event\EventSubscriber\ConfigLogDatabaseSubscriber
+    arguments: ['@database', '@config.factory', '@current_user']
+    tags:
+      - { name: event_subscriber }
+  config_log_psr_subscriber:
+    class: Drupal\event\EventSubscriber\ConfigLogPsrSubscriber
+    arguments: ['@logger.channel.default', '@config.factory']
+    tags:
+      - { name: event_subscriber }

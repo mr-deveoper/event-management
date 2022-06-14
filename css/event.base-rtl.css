@@ -1,0 +1,9 @@
+
+/**
+ * @file
+ * Right-to-left specfic base stylesheet for the Event module.
+ */
+
+.event .bar .foreground {
+  float: right;
+}

@@ -1,0 +1,10 @@
+event.event_list:
+  title: Events
+  route_name: event.event_list
+  parent: system.admin_content
+  description: 'List and edit events.'
+event.settings:
+  title: 'Event settings'
+  parent: system.admin_config_content
+  description: 'Configure events.'
+  route_name: event.settings

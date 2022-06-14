@@ -1,0 +1,10 @@
+
+/**
+ * @file
+ * Theme stylesheet for the Event module.
+ */
+
+.event dl,
+.event dd {
+  margin: 0;
+}

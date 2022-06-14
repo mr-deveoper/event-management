@@ -1,0 +1,8 @@
+{
+    "name": "mr-developer/event_managment",
+    "type": "drupal-custom-module",
+    "description": "Drupal 9 module for Event Management.",
+    "homepage": "https://github.com/mr-developer/event_managment",
+    "license": "GPL-2.0-or-later",
+    "require": {}
+}
