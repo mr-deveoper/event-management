@@ -1,8 +1,16 @@
 {
-    "name": "mr-developer/event_managment",
+    "name": "mr-deveoper/event-management",
     "type": "drupal-custom-module",
     "description": "Drupal 9 module for Event Management.",
-    "homepage": "https://github.com/mr-developer/event_managment",
+    "homepage": "https://github.com/mr-deveoper/event-management",
     "license": "GPL-2.0-or-later",
-    "require": {}
+    "authors": [
+        {
+            "name": "Ahmed ali",
+            "email": "ahmed.aly.mahamoud@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3 || ^8.0"
+    }
 }
